@@ -61,3 +61,63 @@ docker start [NOMBRE_CONTENEDOR]
 ```bash
 docker rm [NOMBRE CONTENEDOR]
 ```
+
+## - Imágenes huérfanas:
+```bash
+$ docker images --filter "dangling=true"
+```
+
+## - Cargar imágen sin ejecutar contenedor:
+```bash
+$ docker pull [NOMBRE_IMAGEN]
+```
+
+## Cargar versión específica de una imagen:
+```bash
+$ docker pull [NOMBRE_IMAGEN]:[VERSION]
+```
+
+## - Descargar todos los tags de una imagen:
+```bash
+$ docker pull -a [IMAGEN]
+```
+
+## - Descargar imagen desde otro registry:
+```bash
+$ docker run --rm [REGISTRY] echo "[IMAGEN]"
+```
+
+## - Filtrar por oficiales y numero de estrellas:
+```bash
+$ docker search --filter is-official=true --filter stars=3 [NOMBRE]
+```
+
+## - Ejecutar dockerfile:
+```bash
+$ docker build .
+```
+
+## - Nombrar la imagen al ejecutar un dockerfile:
+```bash
+$ docker build -t [NOMBRE_IMAGEN] .
+```
+
+## - Conocer el historial de distintas capas que posee una imagen:
+```bash
+$ docker history [IMAGEN]
+```
+
+## - Inspección de imágenes:
+```bash
+$ docker inspect [IMAGEN]
+```
+
+## - Eliminar una imágen.
+```bash
+docker rmi [IMAGEN]
+```
+
+## - Eliminar una imágen huérfana:
+```bash
+$ docker images -f dangling=true -q | xargs docker rmi
+```
