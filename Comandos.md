@@ -2,64 +2,92 @@
 
 ## - Version.
 ```bash
-docker --version
+$ docker --version
 ```
 ## - Crear un contenedor.
 ```bash
-docker run [OPCIONES] NOMBRE_IMAGEN [COMANDO] [...]
+$ docker run [OPCIONES] NOMBRE_IMAGEN [COMANDO] [...]
 ```
 ## - Ejecutar en segundo plano.
 ```bash
-docker run --detach [...]
+$ docker run --detach [...]
 ```
 ## - Personalizar nombre del contenedor.
 ```bash
-docker run --name [NOMBRE] --publish [...]
+$ docker run --name [NOMBRE] --publish [...]
 ```
 ## - Cambiar nombre de contenedor.
 ```bash
-docker rename [OLD NAME] [NEW NAME]
+$ docker rename [OLD NAME] [NEW NAME]
 ```
 ## - Ejecutar contenedor con shell interactiva.
 ```bash
-docker run -it [NOMBRE_IMAGEN]
+$ docker run -it [NOMBRE_IMAGEN]
 ```
 ## - Mantener el contenedor abierto sin misión:
 ```bash
-docker run -dt [NOMBRE]
+$ docker run -dt [NOMBRE]
 ```
 ## - Ejecutar un comando dentro del contenedor:
 ```bash
-docker exec [NOMBRE CONTENEDOR] [COMANDO]
+$ docker exec [NOMBRE CONTENEDOR] [COMANDO]
+```
+## - Acceder al contenedor con un usuario definido dentro de él:
+```bash
+$ docker exec -u <username> -ti nginx_v1 bash
+```
+## - Consumo de recursos de un contenedor:
+```bash
+$ docker stats [NOMBRE]
+```
+## - Eliminar todos los contenedores:
+```bash
+$ docker rm -f $(docker ps -aq)
+```
+## - Contenedor que se autodestruya al salir de la terminal:
+```bash
+$ docker run --rm -ti --name centos centos bash
+```
+## - Escribir en la cmd del container:
+```bash
+$ docker run -dti --name [NOMBRE_CONT] [NOMBRE_IMG] echo [CONTENIDO]
+```
+## - Convertir contenedor en imagen:
+```bash
+$ docker commit [NOMBRE_CONT] [NOMBRE_IMG]
 ```
 ## - Listar Imágenes:
 ```bash
-docker images
+$ docker images
 ```
 ## - Listar los diferentes contenedores.
 ```bash
-docker container ls
+$ docker container ls
 ```
 o bien:
 ```bash
-docker ps -all
+$ docker ps -all
+```
+para mostrar los activos:
+```bash
+$ docker ps
 ```
 ## - Copiar contenido dentro de un contenedor o desde él.
 ```bash
-docker cp [RUTA_ORIGEN] [RUTA_DESTINO]
+$ docker cp [RUTA_ORIGEN] [RUTA_DESTINO]
 ```
 ## - Parar el contenedor.
 ```bash
-docker stop [NOMBRE_CONTENEDOR]
+$ docker stop [NOMBRE_CONTENEDOR]
 ```
 ## - Activar contenedor.
 ```bash
-docker start [NOMBRE_CONTENEDOR]
+$ docker start [NOMBRE_CONTENEDOR]
 ```
 
 ## - Eliminar un contenedor (debe estar desactivado):
 ```bash
-docker rm [NOMBRE CONTENEDOR]
+$ docker rm [NOMBRE CONTENEDOR]
 ```
 
 ## - Imágenes huérfanas:
@@ -114,7 +142,7 @@ $ docker inspect [IMAGEN]
 
 ## - Eliminar una imágen.
 ```bash
-docker rmi [IMAGEN]
+$ docker rmi [IMAGEN]
 ```
 
 ## - Eliminar una imágen huérfana:

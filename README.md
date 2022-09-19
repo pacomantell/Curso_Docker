@@ -13,3 +13,10 @@
     - Dockerfiles. Instrucciones.
     - Buenas prácticas.
     - Multistage building.
+
+3. Contenedores.
+    - Comandos y usos.
+    - Trabajar con variables de entorno.
+    - Gestión de recursos.
+    - Convertir un contenedor en una imagen.
+    - Document root.
