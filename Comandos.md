@@ -149,3 +149,18 @@ $ docker rmi [IMAGEN]
 ```bash
 $ docker images -f dangling=true -q | xargs docker rmi
 ```
+
+## - dirección IP de un contenedor:
+```bash
+$ docker container inspect [NOMBRE_CONT] | findstr "IPAddress"
+```
+
+## - Consultar el tipo de red de nuestras imágenes:
+```bash
+$ docker network ls
+```
+
+## - Establecer una comunicación entre contenedores (en la misma red):
+```bash
+$ docker exec centos2 bash -c "ping 172.17.0.2"
+```

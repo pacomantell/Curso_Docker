@@ -20,3 +20,10 @@
     - Gestión de recursos.
     - Convertir un contenedor en una imagen.
     - Document root.
+4. Networking.
+    - Estado y nombre de red.
+    - Conexion entre contenedores.
+    - Mapeo de puertos.
+    - Creación de redes.
+    - Comunicación entre contenedores en red.
+    - Tipos de drivers para redes.
