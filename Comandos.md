@@ -164,3 +164,27 @@ $ docker network ls
 ```bash
 $ docker exec centos2 bash -c "ping 172.17.0.2"
 ```
+
+## - Eliminar todo el contenido de docker:
+```bash
+$ docker prune
+```
+
+## - Crear un volumen:
+```bash
+$ docker volume create <nombre_vol>
+```
+
+## - Listar los volúmenes:
+```bash
+$ docker volume ls
+```
+
+## - Eliminar todos los volúmenes:
+```bash
+$ docker volume prune
+```
+## - Eliminar un volumen:
+```bash
+$ docker volume rm [nombre]
+```

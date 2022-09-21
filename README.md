@@ -27,3 +27,12 @@
     - Creación de redes.
     - Comunicación entre contenedores en red.
     - Tipos de drivers para redes.
+5. Volúmenes.
+    - Tipos de volúmenes en docker.
+        - host volume.
+        - anonymus volume.
+        - named volume.
+    - Trabajando con tipos de volúmenes en contenedores MySQL
+    - Compartir volúmenes.
+    - Instrucciones docker para volúmenes
+6. Docker compose.
