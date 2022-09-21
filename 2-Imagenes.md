@@ -1,6 +1,6 @@
-# Trabajando con imágenes en Docker
+# **Trabajando con imágenes en Docker**
 
-## Imágenes huérfanas.
+## **Imágenes huérfanas**
 Cuando realizamos un cambio en un dockerfile y lanzamos la imagen, la versión anterior de dicha imagen pasará a estar en desuso (huérfana).
 Por ejemplo, en el dockerfile de 01-quick_start, si añadimos el comando:
 ```dockerfile
@@ -23,7 +23,7 @@ $ docker images --filter "dangling=true"
 REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
 <none>       <none>    d1d720ced60a   12 minutes ago   280MB
 ```
-## Versiones.
+## **Versiones**
 
 Cargamos ahora la imagen hello-world sin ejecutar un contenedor:
 ```bash
@@ -51,17 +51,17 @@ y si sólo queremos versiones oficiales:
 ```bash
 $ docker search --filter is-official=true --filter stars=3 [NOMBRE]
 ```
-## Historial.
+## **Historial**
 El comando `history` permite conocer el historial de distintas capas que posee una imagen.
 ```bash
 $ docker history [IMAGEN]
 ```
-## Inspección de imágenes.
+## **Inspección de imágenes**
 Las imágenes pueden ser inspeccionadas, obteniéndose toda la información de las mismas:
 ```bash
 $ docker inspect [IMAGEN]
 ```
-## Eliminar una imágen.
+## **Eliminar una imágen**
 Es posible eliminar imágenes que no están siendo utilizadas por ningún contenedor.
 ```bash
 docker rmi [IMAGEN]
@@ -71,7 +71,7 @@ Para eliminar una imágen huérfana:
 $ docker images -f dangling=true -q | xargs docker rmi
 ```
 
-# Dockerfiles.
+# **Dockerfiles**
 Un dockerfile es un fichero donde se imprime la receta a sehuir para construir una imagen. Para abrir dicho fichero, se debe ejecutar el comando:
 ```bash
 $ docker build .
@@ -84,7 +84,7 @@ Normalmente se suele llamar al fichero dockerfile, aunque puede tener otro nombr
 ```bash
 $ docker build -t [NOMBRE_IMAGEN] -f [NOMBRE_DOCKERFILE]
 ```
-## Formato.
+## **Formato**
 El formato de los dockerfiles suele ser el siguiente:
 ```dockerfile
 # Esto es un comentario
@@ -95,14 +95,14 @@ RUN COMANDO
 RUN DOMANDO2
 ...
 ```
-## Buenas prácticas creando el dockerfile:
+## **Buenas prácticas creando el dockerfile**
 - Los contenedores deben ser efímeros.
 - Uso de ficheros [.dockerignore](.dockerignore), que nos perfmitirá ignorar ciertos ficheros de nuestra imagen que no sean necesarios.
 - No instalar paquetes innecesarios.
 - Minimizar el número de capas.
 - Las capas deben ejecutarse en múltiples líneas.
 
-## Instrucciones de Dockerfile.
+## **Instrucciones de Dockerfile**
 * ### FROM
     Determina la imagen a partir de la cual se construirá nuestra imagen customizada.
     Sintáxis:
@@ -250,7 +250,7 @@ RUN DOMANDO2
     VOLUME [UBICACION]
     ```
 
-# Buenas prácticas.
+# **Buenas prácticas**
 
 ```dockerfile
 FROM nginx
@@ -268,7 +268,7 @@ RUN \
     echo "2" >> /usr/share/nginx/html/test.txt && \
     echo "3" >> /usr/share/nginx/html/test.txt
 ```
-## Multistage building
+## **Multistage building**
 Permite construir imágenes que trabajan sobre los outputs de otras, permitiendo recuperar sus resultados, lo que agiliza el peso en memoria.
 Un ejemplo sería:
 ```dockerfile

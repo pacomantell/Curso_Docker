@@ -1,6 +1,6 @@
-# Networking
+# **Networking**
 
-## Estado y nombre de la red.
+## **Estado y nombre de la red**
 Todo contenedor, cuando se levanta, se conecta automáticamente.
 Por ejemplo, levantamos el siguiente contenedor:
 ```bash
@@ -84,7 +84,7 @@ Si queremos desconectar nuestro contenedor de la red:
 $ docker network disconnect [NETWORK] [NOMBRE_CONT]
 ```
 
-## Conexión entre contenedores de la misma red
+## **Conexión entre contenedores de la misma red**
 
 Si creamos otro contenedor en la misma red:
 ```bash
@@ -114,7 +114,7 @@ PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
 64 bytes from 172.17.0.2: icmp_seq=11 ttl=64 time=0.103 ms
 ```
 
-## Mapeo de puertos
+## **Mapeo de puertos**
 
 Creamos el siguiente contenedor:
 ```bash
@@ -137,7 +137,7 @@ Si quiero emparejar los puertos automáticamente:
 $ docker run -d --name nginx --publish-all  nginx
 ```
 
-## Creación de redes.
+## **Creación de redes**
 Para crear una nueva red ejecutamos el comando:
 ```bash
 $ docker network create [NOMBRE]
@@ -157,7 +157,7 @@ Podemos especificar cualquier característica de nuestra red al crearla:
 $ docker network create -d bridge --subnet 172.124.10.0/24 --gateway 172.124.10.1 [NOMBRE_NET]
 ```
 
-## Comunicación entre contenedores en red
+## **Comunicación entre contenedores en red**
 
 Cuando dos contenedores comparten la misma red, pueden llamarse el uno al otro simplemente por sus nombres. Para ello, creamos una nueva red:
 '''bash
@@ -265,7 +265,7 @@ y ahora creamos un nuevo contenedor con una IP asignada:
 $ docker run -d --network my-net --ip 172.128.10.50 --name nginx-v1 centos
 ```
 
-## Tipos de drivers para redes
+## **Tipos de drivers para redes**
 
 * **Bridge**
     - Es el controlador por defecto. Posee la configuración básica para conectar dos contenedores entre sí, siendo la mejor solución para conectar dos contenedores en el mismo host.

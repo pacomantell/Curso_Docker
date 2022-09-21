@@ -1,6 +1,6 @@
-# Contenedores
+# **Contenedores**
 
-## Comandos y usos de los contenedores.
+## **Comandos y usos de los contenedores**
 
 Ya hemos visto que para listar los diferentes contenedores debemos ejecutar el comando:
 ```bash
@@ -87,7 +87,7 @@ Si queremos un contenedor que se autodestruya al salir de la terminal, debemos e
 ```bash
 $ docker run --rm -ti --name centos centos bash
 ```
-## Trabajar con variables de entorno.
+## **Trabajar con variables de entorno**
 Construimos la siguiente imagen:
 ```dockerfile
 # Definimos SO
@@ -133,7 +133,7 @@ prueba1
 4321
 [paco@7cf3b247045e /]$
 ```
-## Gestión de recursos.
+## **Gestión de recursos**
 Podemos ver el consumo de recursos de un contenedor:
 ```bash
 $ docker stats my-mongo
@@ -149,7 +149,7 @@ También podemos limitar la memoria y el uso de cpus del constenedor:
 $ docker run -d --name my-mongo-2 -m "500mb" mongo --cpuset-cpus 0-1 -p 8084:27017 mongo
 ```
 
-## Convertir un contenedor en una imagen.
+## **Convertir un contenedor en una imagen**
 Creamos un contenedor:
 ```bash
 $ docker run -d -p 8081:80 --name nginx_v1 nginx
@@ -162,7 +162,7 @@ $ docker commit nginx_v1 nginx-custom
 
 y podemos usarla para lanzar otro contenedor.
 
-## Document root.
+## **Document root**
 Es donde Docker ubica los elementos del container. Resulta útil cuando se quiere recuperar información de volúmenes creados.
 Para saber donde se ubica, ejecutamos el comando:
 ```bash

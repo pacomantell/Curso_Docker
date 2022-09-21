@@ -1,10 +1,10 @@
-# Introducción
+# **Introducción**
 
 Docker es un sistema de contenedores que recrea el mismo entorno de ejecución de software en diferentes máquinas, lo que elimina los problemas de ejecución asociados al entorno.
 
 Ésto ofrece ventajas sobre las máquinas virtuales, ya que los contenedores son mucho más ligeros que éstas, de modo que se puede llegar a tener una gran cantidad de contenedores sin afectar al rendimiento de la máquina.
 
-## Funcionamiento básico de Docker.
+## **Funcionamiento básico de Docker**
 
 Supongamos que tenemos tres bloques: el Cliente, el Docker Host y el Registro.
 
@@ -16,7 +16,7 @@ Supongamos que tenemos tres bloques: el Cliente, el Docker Host y el Registro.
 
 ![https://www.josedomingo.org/pledin/assets/wp-content/uploads/2016/02/docker2.png](https://www.josedomingo.org/pledin/assets/wp-content/uploads/2016/02/docker2.png)
 
-## Docker CLI
+## **Docker CLI**
 
 Veamos los comandos más básicos de Docker.
 
