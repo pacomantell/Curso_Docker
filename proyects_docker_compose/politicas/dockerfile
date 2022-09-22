@@ -1,0 +1,7 @@
+FROM centos
+# Copio script
+COPY start.sh /start.sh
+# Le doy permiso de ejecución
+RUN chmod +x /start.sh
+# Ejecuto
+CMD /start.sh

@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    container_name: web-1
+    image: centos
+    command: echo hello-world

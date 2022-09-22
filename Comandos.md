@@ -188,3 +188,28 @@ $ docker volume prune
 ```bash
 $ docker volume rm [nombre]
 ```
+
+## - Ejecutar un docker compose ejecutamos el siguiente comando en consola, dentro de la carpeta donde se encuentre el archivo:
+```bash
+$ docker-compose up -d
+```
+
+## - Si nuestro docker compose tiene otro nombre diferente:
+```bash
+$ docker-compose -f ./[nombre] up -d
+```
+
+## - Bajar el docker compose:
+```bash
+$ docker-compose down
+```
+
+## - Construir las imágenes que contienen los servicios del docker compose:
+```bash
+$ docker-compose build
+```
+
+## - Para reconstruirlas:
+```bash
+$ docker-compose build --no-cache
+```

@@ -20,6 +20,7 @@
     - Gestión de recursos.
     - Convertir un contenedor en una imagen.
     - Document root.
+
 4. Networking.
     - Estado y nombre de red.
     - Conexion entre contenedores.
@@ -27,6 +28,7 @@
     - Creación de redes.
     - Comunicación entre contenedores en red.
     - Tipos de drivers para redes.
+
 5. Volúmenes.
     - Tipos de volúmenes en docker.
         - host volume.
@@ -35,4 +37,14 @@
     - Trabajando con tipos de volúmenes en contenedores MySQL
     - Compartir volúmenes.
     - Instrucciones docker para volúmenes
+
 6. Docker compose.
+    - Conceptos básicos.
+    - Trabajando con ficheros docker-compose.
+    - Variables de entorno.
+    - Volúmenes nombrados.
+    - Volúmenes host.
+    - Networks.
+    - Imágenes.
+    - Limitar recursos.
+    - Políticas de reinicio.
